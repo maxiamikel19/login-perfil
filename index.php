@@ -10,8 +10,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+    <div class="container pt-5 " style="width: 35%;">
     <h2>Login de usuario</h2>
 
     <?php  
@@ -22,16 +24,17 @@
     ?>
 
     <form action="valida.php" method="POST" name="formLogin">
-        <div class="form-content">
-            <label for="usuario">Usu&aacute;rio</label>
-            <input type="text" name="usuario" placeholder="Digite seu usuario" value="<?php if(isset($uausrio)){ echo $uausrio;}  ?>" >
+        <div class="form-group" >
+            <label for="usuario" class="form-label">Usu&aacute;rio</label>
+            <input type="text" name="usuario" class="form-control" placeholder="Digite seu usuario" value="<?php if(isset($uausrio)){ echo $uausrio;}  ?>" >
         </div>
 
-        <div class="form-content">
+        <div class="form-group mt-7">
             <label for="usuario">Password</label>
-            <input type="password" name="password" placeholder="******">
+            <input type="password" name="password" class="form-control" placeholder="******">
         </div>
-        <input type="submit" name="btnSubmit" class="btn-submit" value="Acessar">
+        <input type="submit" name="btnSubmit" class="mt-4 btn btn-primary" value="Acessar">
     </form>
+    </div>
 </body>
 </html>
